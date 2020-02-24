@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_170400) do
     t.bigint "dress_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
     t.index ["dress_id"], name: "index_reviews_on_dress_id"
   end
 
