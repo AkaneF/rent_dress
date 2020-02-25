@@ -18,6 +18,6 @@ class DressesController < ApplicationController
 
   private
   def dress_params
-    params.require(:dress).permit(:name, :price, :category,:size)
+    params.require(:dress).permit(:name, :price, :category,:size, :photo)
   end
 end
