@@ -1,13 +1,26 @@
 <div class="banner">
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
   <h1>Rent my dress</h1>
   <p>Never wear the same thing twice.</p>
   <button type="button" class="btn btn-outline-light">Pick now</button>
 </div>
 
+<div class="description">
+  <h2>Find your next night out dress.</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam at hic nulla necessitatibus modi, ipsam eaque sed beatae error consectetur tenetur ducimus iure fuga saepe, deserunt laudantium reprehenderit eligendi cum.</p>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-4 text-center">
-      <%= image_tag 'black_dress.jpeg', class: 'dress-img'%>
+      <%#= link_to dress_path do%>
+        <%= image_tag 'black_dress.jpeg', class: 'dress-img'%>
+      <%# end %>
     </div>
     <div class="col-4 text-center">
       <%= image_tag 'bridesmaid_dress.jpeg', class: 'dress-img'%>
