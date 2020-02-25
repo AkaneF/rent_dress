@@ -1,5 +1,11 @@
 <h1>Index page for dresses</h1>
 <% @dresses.each do |dress| %>
-<p><%= link_to dress.name, dress_path(dress) %></p>
+  <%= dress.name %>
+  <% if dress.photo.attached? %>
+    <%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <%= cl_image_tag "th2pn0ppea3dn3iq5h7w", height: 300, width: 400, crop: :fill %>
+  <% end %>
+  <%= link_to dress.name, dress_path(dress) %>
 <% end %>
 <%= link_to "Add dress", new_dress_path, class: "btn btn-primary" %>

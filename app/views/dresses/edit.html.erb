@@ -1,10 +1,10 @@
-<h3>Add a new photo </h3>
+<h3>Edit the dress </h3>
 <%= simple_form_for(@dress) do |f| %>
 <%= f.input :name %>
 <%= f.input :size %>
 <%= f.input :price %>
 <%= f.input :photo, as: :file %>
 <%= f.input :category, collection: Dress.pluck(:category).uniq %>
-<%= f.submit 'Create new dress!' %>
+<%= f.submit 'edit dress!' %>
 <% end %>
-<%= link_to "Dress index", dresses_path %>
+<%= link_to "Dress index page", dresses_path %>
