@@ -1,8 +1,10 @@
 <div>
+<p><%= link_to"dress index page", dresses_path %></p>
 <%= @dress.name %>
 <%= @dress.price %>
 <%= @dress.category %>
 <%= @dress.size%>
+<%= link_to "edit dress", edit_dress_path %>
 </div>
 
 <% @dress.reviews.each do |review|%>
@@ -11,3 +13,4 @@
 <% end %>
 
 <p><%= link_to "Adding Review", new_dress_review_path(@dress) %></p>
+<%= link_to "delete", dress_path(@dress), method: :delete, data: { confirm: "Are you sure?"}%>
