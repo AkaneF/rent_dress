@@ -13,4 +13,5 @@
 <% end %>
 
 <p><%= link_to "Adding Review", new_dress_review_path(@dress) %></p>
+<p><%= link_to "Back", dresses_path %></p>
 <%= link_to "delete", dress_path(@dress), method: :delete, data: { confirm: "Are you sure?"}%>

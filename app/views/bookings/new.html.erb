@@ -1,0 +1,11 @@
+<h2>Add Booking</h2>
+<%= simple_form_for [@dress, @review, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :confirm %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+
+
+<%= link_to "Back", dress_path(@dress) %>
+
