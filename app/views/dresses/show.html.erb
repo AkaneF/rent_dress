@@ -4,3 +4,10 @@
 <%= @dress.category %>
 <%= @dress.size%>
 </div>
+
+<% @dress.reviews.each do |review|%>
+<p><%= review.rating %></p>
+<p><%= review.content %></p>
+<% end %>
+
+<p><%= link_to "Adding Review", new_dress_review_path(@dress) %></p>

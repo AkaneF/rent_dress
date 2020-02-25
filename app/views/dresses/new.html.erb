@@ -1,6 +1,7 @@
 <h3>Add a new photo </h3>
 <%= simple_form_for(@dress) do |f| %>
 <%= f.input :name %>
+<%= f.input :size %>
 <%= f.input :price %>
 <%= f.input :category%>
 <%= f.input :photo, as: :file %>

@@ -10,13 +10,15 @@ class DressesController < ApplicationController
   end
   def create
     @dress = Dress.new(dress_params)
-    if @dress
-      @dress.save
+    if @dress.save
+      redirect_to dresses_path
     else
       render :new
+    end
   end
 
   private
+
   def dress_params
     params.require(:dress).permit(:name, :price, :category,:size)
   end
