@@ -7,19 +7,19 @@
 <body>
   <h2>All Dresses</h2>
 
-  <div class="grid">
+  <div class="grid-index">
     <% @dresses.each do |dress| %>
-      <div class="dress-card">
+      <div class="dress-index-card">
 
       <% if dress.photo.attached? %>
-      <div class="dress-image">
+      <div class="dress-index-image">
         <%= link_to dress_path(dress), target: :_blank do %>
           <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
         <% end %>
       </div>
       <% else %>
       <% end %>
-      <div class="dress-info">
+      <div class="dress-index-info">
       <%= link_to dress.name, dress_path(dress) %>
       </br>
       <p>£ <%= dress.price/100 %></p>
