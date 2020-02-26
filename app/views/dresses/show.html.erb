@@ -8,12 +8,27 @@
 <%= link_to "edit dress", edit_dress_path %>
 </div>
 
+<h2>Add Booking</h2>
+<%= simple_form_for [@dress, @booking] do |f| %>
+  <%= f.input :start_date, as: :date, html5:true %>
+  <%= f.input :end_date,as: :date, html5:true %>
+  <%= f.input :confirm %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+
+<h2>Add Review</h2>
+<%= simple_form_for [@dress, @review] do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :content %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+
 <% @dress.reviews.each do |review|%>
 <p><%= review.rating %></p>
 <p><%= review.content %></p>
 <% end %>
 
 <p><%= link_to "Book", new_dress_booking_path(@dress) %></p>
-<p><%= link_to "Adding Review", new_dress_review_path(@dress) %></p>
 <p><%= link_to "Back", dresses_path %></p>
 <%= link_to "delete", dress_path(@dress), method: :delete, data: { confirm: "Are you sure?"}%>
+
