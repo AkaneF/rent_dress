@@ -21,3 +21,29 @@
   background: #ddd;
   color: black;
 }
+
+
+.topnav-all-pages {
+  background-color: black;
+  height: 60px;
+  opacity: 0.5;
+  position: fixed;
+  text-decoration: none;
+  width: 100%;
+  padding: 0 50;
+  top: 0;
+}
+
+.topnav-all-pages a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav-all-pages a:hover {
+  background: #ddd;
+  color: black;
+}
