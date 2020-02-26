@@ -1,13 +1,34 @@
-<h1>Index page for dresses</h1>
-<% @dresses.each do |dress| %>
 
-  <%= dress.name %>
-  <% if dress.photo.attached? %>
-    <%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %>
-  <% else %>
-    <%= cl_image_tag "th2pn0ppea3dn3iq5h7w", height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <%= link_to dress.name, dress_path(dress) %>
+<!DOCTYPE html>
+<html>
+  <head>
 
-<% end %>
-<%= link_to "Add dress", new_dress_path, class: "btn btn-primary" %>
+  </head>
+<body>
+  <h2>All Dresses</h2>
+
+  <div class="grid">
+    <% @dresses.each do |dress| %>
+      <div class="dress-card">
+
+      <% if dress.photo.attached? %>
+      <div class="dress-image">
+        <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
+      </div>
+      <% else %>
+      <% end %>
+      <div class="dress-info">
+      <%= link_to dress.name, dress_path(dress) %>
+      </br>
+      <p>£ <%= dress.price/100 %></p>
+      </div>
+
+      </div>
+    <% end %>
+
+  </div>
+  </br>
+  <%= link_to "Add dress", new_dress_path, class: "btn btn-primary" %>
+  </body>
+</html>
+<!-- end of file -->
