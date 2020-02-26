@@ -1,0 +1,19 @@
+<h2>Index page for bookings</h2>
+
+<% @bookings.each do |booking| %>
+  <% days = (booking.end_date - booking.start_date).to_i %>
+  <p>Name: <%= booking.dress.name %></p>
+  <p>Category: <%= booking.dress.category %></p>
+  <p>Price:£ <%= (booking.dress.price/100) * days %></p>
+  <p><%= cl_image_tag booking.dress.photo.key, height: 400, width: 300, crop: :fill  %></p>
+  <p>Size: <%= booking.dress.size %></p>
+  <p>Start Date: <%= booking.start_date %></p>
+  <p>End Date: <%= booking.end_date %></p>
+  <p>Total Days: <%= days %></p>
+  <% if booking.confirm %>
+    <p> Booking confirmed</p>
+  <% end %>
+  <%= link_to "delete", booking_path(booking),method: :delete %>
+
+<% end %>
+<%= link_to "Dress Index Page", dresses_path  %>
