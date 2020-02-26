@@ -13,7 +13,9 @@
 
       <% if dress.photo.attached? %>
       <div class="dress-image">
-        <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
+        <%= link_to dress_path(dress), target: :_blank do %>
+          <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
+        <% end %>
       </div>
       <% else %>
       <% end %>
@@ -25,10 +27,7 @@
 
       </div>
     <% end %>
-
   </div>
-  </br>
-  <%= link_to "Add dress", new_dress_path, class: "btn btn-primary" %>
   </body>
 </html>
 <!-- end of file -->
