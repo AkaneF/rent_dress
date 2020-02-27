@@ -9,8 +9,8 @@
     <div class="dress-all">
       <!-- <div class="d-flex justify-content-center pt-5"> -->
         <h2>Dress show page</h2>
-        <div class="dress-image">
-          <%= cl_image_tag @dress.photo.key,height: 450, width: 250, crop: :fill %>
+        <div class="dress-image full-screen" >
+          <%= cl_image_tag @dress.photo.key,height: 450, width: 250, crop: :fill, data: {toggle: "modal", target: "#exampleModal"} %>
         </div>
         <div class="dress-info">
         </br>
@@ -43,3 +43,20 @@
       <% end %>
     </div>
   </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= @dress.name %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= cl_image_tag @dress.photo.key, class: "modal-img-w" %>
+      </div>
+    </div>
+  </div>
+</div>
