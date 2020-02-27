@@ -16,7 +16,9 @@ margin:20px;
 
 .booking-card{
   padding: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  max-width: max-content; //card max size wide km
+  align-self: center; //card content center km
   background-color: white;
   height:390px;
   overflow: hidden;
