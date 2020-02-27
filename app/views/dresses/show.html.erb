@@ -5,39 +5,37 @@
   <a href="#about">About</a>
 </div>
 
-
   <div class="grid pb-5">
   <!-- <div class="d-flex justify-content-center p-3"> -->
     <div class="dress-all">
       <!-- <div class="d-flex justify-content-center pt-5"> -->
         <h2>Dress show page</h2>
-
         <div class="dress-image">
           <%= cl_image_tag @dress.photo.key,height: 450, width: 250, crop: :fill %>
         </div>
-
         <div class="dress-info">
         </br>
+          <div>
           <h5 class="pb-4"><%= @dress.name %></h5>
-            <p>Price: £<%= @dress.price/100 %></p>
+
+            <p>Price: £<%= @dress.price %></p>
             <p>Category: <%= @dress.category %></p>
             <p>Size: <%= @dress.size%></p>
-          </div>
+            </div>
+        </div>
     </div>
-
     <div class="booking-all">
         <h2>Book this dress</h2>
 
-      <%= simple_form_for [@dress, @booking] do |f| %>
-        <%= f.input :start_date, as: :date, html5:true %>
-        <%= f.input :end_date,as: :date, html5:true %>
+      <%= simple_form_for [@dress, Booking.new] do |f| %>
+        <%= f.input :start_date, as: :date, html5:true, input_html: { value: Date.today } %>
+        <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today } %>
         <%= f.input :confirm %>
         <%= f.submit class: "btn btn-primary" %>
       <% end %>
-
+      <% if Booking.where(dress: @dress).where(user: current_user).any? %>
         <h2>Add Review</h2>
-
-          <%= simple_form_for [@dress, @review] do |f| %>
+          <%= simple_form_for [@dress, Review.new] do |f| %>
             <%= f.input :rating %>
             <%= f.input :content %>
             <%= f.submit class: "btn btn-primary" %>
@@ -45,10 +43,10 @@
 
         <div class="d-flex justify-content-center">
           <% @dress.reviews.each do |review|%>
-          <p><%= review.rating %></p>
+          <p><%= "⭐" * (review.rating.to_i) %></p>
           <p><%= review.content %></p>
           <% end %>
         </div>
+      <% end %>
     </div>
   </div>
-
