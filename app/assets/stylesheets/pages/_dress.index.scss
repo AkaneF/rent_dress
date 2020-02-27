@@ -1,6 +1,13 @@
+
 body {
   margin: 0 auto;
-  background-color: #FFE6E6;
+  background-color: #FCF4F4;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1a1919;
+  letter-spacing: 1px;
+  font-family: HelveticaNeueW01-65Medi,sans-serif;
+  font-weight: 400;
 
 }
 
@@ -9,6 +16,7 @@ h2 {
   font-family: 'Dancing Script';
   text-align: center;
   margin: 30px 0px;
+  font-size: 50px;
 }
 
 
@@ -32,20 +40,41 @@ h3 {
 .dress-index-card{
   text-align: bottom;
   background: #fff;
-  // kenneth
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //align-items: flex-end;
-   border-collapse: collapse;
-   border-radius: 5px
+  border-collapse: collapse;
+  border-radius: 5px
 
 }
 
 
 .dress-index-info{
   margin-left: 10px;
+  margin-bottom: 10px;
   text-align: left;
+  text-decoration: none;
+  background: white;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  p {
+    background: white;
+    margin: 0;
+  }
 }
 
 .dress-index-image{
   padding: 0px 0px 0px 0px;
+  img {
+    padding: 20px 10px;
+    border-radius: 15px;
+  }
+  .dress-index-image {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+  }
+
 }
