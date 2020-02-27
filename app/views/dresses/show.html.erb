@@ -24,14 +24,13 @@
         <h2>Book this dress</h2>
       <%= simple_form_for [@dress, Booking.new] do |f| %>
         <%= f.input :start_date, as: :date, html5:true, input_html: { value: Date.today } %>
-        <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today } %>
-        <%= f.input :confirm %>
+        <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today + 1 } %>
         <%= f.submit class: "btn btn-primary" %>
       <% end %>
       <% if Booking.where(dress: @dress).where(user: current_user).any? %>
         <h2>Add Review</h2>
           <%= simple_form_for [@dress, Review.new] do |f| %>
-            <%= f.input :rating %>
+            <%= f.input :rating, collection: 1..5  %>
             <%= f.input :content %>
             <%= f.submit class: "btn btn-primary" %>
           <% end %>

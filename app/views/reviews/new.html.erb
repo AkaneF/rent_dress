@@ -2,7 +2,7 @@
 
 
 <%= simple_form_for [@dress, @review] do |f| %>
-  <%= f.input :rating %>
+  <%= f.input :rating, collection: 1..5  %>
   <%= f.input :content %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

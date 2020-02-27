@@ -22,3 +22,8 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 import "bootstrap";
+import { initMapbox } from './init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
