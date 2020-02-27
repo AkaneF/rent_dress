@@ -20,7 +20,7 @@ fifth_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v158267
 sixth_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582677315/honey-yanibel-minaya-cruz-sDYat0TWq0w-unsplash_vgdky6.jpg')
 
 
-# Dress.destroy_all
+Dress.destroy_all
 User.create email: "test@test.com", password: "123456"
 
 
