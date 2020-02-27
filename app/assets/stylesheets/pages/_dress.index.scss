@@ -29,8 +29,15 @@ h3 {
 }
 
 .dress-index-card{
-  background-color: #faf5e4;
   text-align: center;
+    background: white;
+ overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+
 }
 
 
