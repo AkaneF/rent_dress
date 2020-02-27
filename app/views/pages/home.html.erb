@@ -1,19 +1,4 @@
 <div class="banner">
-  <div class="topnav">
-    <div class = "general-menu">
-      <%= link_to "Home", root_path %>
-      <%= link_to "Dresses", dresses_path %>
-      <%= link_to "Category", dresses_path %>
-    </div>
-    <div class = "login-menu">
-      <%= link_to "Bookings", bookings_path %>
-      <%= link_to "Add Dress", new_dress_path %>
-      <%= link_to "Login", user_session_path %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      <%= link_to "Sign up", new_user_registration_path %>
-    </div>
-  </div>
-
   <h1>Rent my dress</h1>
   <p>Never wear the same thing twice.</p>
   <button type="button" class="btn btn-outline-light home-button"><%= link_to "Pick Now", dresses_path %></button>
