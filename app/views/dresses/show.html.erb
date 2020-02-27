@@ -6,6 +6,7 @@
   <a href="#about">About</a>
 </div>
 
+
   <div class="container grid pb-5">
     <!-- image and description -->
     <div class="dress-all">
@@ -18,7 +19,6 @@
           <p><b>Category:</b> <%= @dress.category %></p>
           <p><b>Size:</b> <%= @dress.size%></p>
       </div>
-
     </div>
     <!-- booking form and button -->
     <div class="booking-all">
@@ -27,6 +27,7 @@
           <%= f.input :start_date, as: :date, html5:true, input_html: { value: Date.today } %>
           <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today } %>
           <%= f.submit class: "btn btn-light mt-3 create-booking-button" %>
+
       <% end %>
       <!-- reviews -->
       <% if Booking.where(dress: @dress).where(user: current_user).any? %>
@@ -36,6 +37,7 @@
           <%= f.input :content %>
           <%= f.submit class: "btn btn-primary" %>
         <% end %>
+
         <div class="d-flex justify-content-center">
           <% @dress.reviews.each do |review|%>
             <p><%= "⭐" * (review.rating.to_i) %></p>
