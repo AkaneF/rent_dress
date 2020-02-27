@@ -1,19 +1,17 @@
 
-body {
+.index-body {
   margin: 0 auto;
   background-color: #FCF4F4;
   font-size: 12px;
   line-height: 1.5;
   color: #1a1919;
   letter-spacing: 1px;
-  font-family: HelveticaNeueW01-65Medi,sans-serif;
   font-weight: 400;
 
 }
 
 
 h2 {
-  font-family: 'Alex Brush';
   text-align: center;
   margin: 30px 0px;
   font-size: 50px;
@@ -53,6 +51,7 @@ h3 {
   text-align: left;
   text-decoration: none;
   background: white;
+  font-family: HelveticaNeueW01-65Medi,sans-serif;
   a {
     text-decoration: none;
     color: black;
