@@ -5,13 +5,12 @@
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
 </div>
-
-
   <div class="container grid pb-5">
     <!-- image and description -->
     <div class="dress-all">
+
       <div class="dress-image-show">
-          <%= cl_image_tag @dress.photo.key,height: 500, width: 350, crop: :fill%>
+        <%= cl_image_tag @dress.photo.key,height: 500, width: 350, crop: :fill, data: {toggle: "modal", target: "#exampleModal"} %>
       </div>
       <div class="dress-info mt-3">
         <h5 class="pb-4"><%= @dress.name %></h5>
@@ -25,15 +24,14 @@
       <h2>Book this dress</h2>
         <%= simple_form_for [@dress, Booking.new] do |f| %>
           <%= f.input :start_date, as: :date, html5:true, input_html: { value: Date.today } %>
-          <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today } %>
+          <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today + 1 } %>
           <%= f.submit class: "btn btn-light mt-3 create-booking-button" %>
-
       <% end %>
       <!-- reviews -->
       <% if Booking.where(dress: @dress).where(user: current_user).any? %>
       <h3>Add Review</h3>
         <%= simple_form_for [@dress, Review.new] do |f| %>
-          <%= f.input :rating %>
+          <%= f.input :rating, collection: 1..5  %>
           <%= f.input :content %>
           <%= f.submit class: "btn btn-light mt-3 create-booking-button" %>
         <% end %>
@@ -50,3 +48,20 @@
       <% end %>
     </div>
   </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= @dress.name %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= cl_image_tag @dress.photo.key, class: "modal-img-w" %>
+      </div>
+    </div>
+  </div>
+</div>
