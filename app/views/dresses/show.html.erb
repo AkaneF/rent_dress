@@ -1,9 +1,5 @@
 
-<!-- navbar -->
-
 <div class="container grid pb-5">
-<div class="container grid pb-5">
-
     <!-- image and description -->
     <div class="dress-all">
 
@@ -19,7 +15,7 @@
     </div>
     <!-- booking form and button -->
     <div class="booking-all">
-      <h2>Book this dress</h2>
+      <h2 class="pb-4">Book this dress</h2>
         <%= simple_form_for [@dress, Booking.new] do |f| %>
           <%= f.input :start_date, as: :date, html5:true, input_html: { value: Date.today } %>
           <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today + 1 } %>
@@ -39,16 +35,15 @@
         </div>
 
       <% if Booking.where(dress: @dress).where(user: current_user).any? %>
-        <h2>Add Review</h2>
+        <h3 class="pt-5">Add Review</h3>
           <%= simple_form_for [@dress, Review.new] do |f| %>
             <%= f.input :rating, collection: 1..5  %>
             <%= f.input :content %>
-            <%= f.submit class: "btn btn-primary" %>
+            <%= f.submit class: "btn btn-light mt-3 create-booking-button" %>
           <% end %>
 
       <% end %>
     </div>
-
 
 </div>
 

@@ -1,17 +1,17 @@
-.head{
-  text-align: center;
-  padding: 40px;
-  font-size: 80px;
+.head {
+  margin: 40px;
 }
+
 .bookings-container{
-display: flex;
-justify-content: space-between;
-flex-direction: column;
-margin:20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin:20px;
 }
-.booking-head{
-  font-weight: bold;
-  font-size: 25px;
+
+.booking-head {
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .booking-card{
@@ -40,7 +40,6 @@ margin:20px;
   margin: 5px;
 }
 .booking-details{
-  font-family: 'Dancing Script';
   font-size: 17px;
   margin-left: 40px;
 }
