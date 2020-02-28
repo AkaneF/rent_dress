@@ -2,8 +2,7 @@ class DressesController < ApplicationController
   before_action :find_dress, only: [:show, :edit,:update,:destroy]
 
   def index
-    @dresses = Dress.all
-     @dresses = Dress.geocoded
+    @dresses = Dress.geocoded
     @markers = @dresses.map do |dress|
       {
         lat: dress.latitude,
@@ -48,6 +47,6 @@ class DressesController < ApplicationController
   end
 
   def dress_params
-    params.require(:dress).permit(:name, :price, :category,:size, :photo)
+    params.require(:dress).permit(:name, :price, :category,:size, :photo, :address)
   end
 end
