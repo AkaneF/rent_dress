@@ -1,31 +1,33 @@
- <h2>All Dresses</h2>
+<h2 class="index-heading">All Dresses</h2>
 <div class="grid-with-map">
   <div class="grid-index">
     <% @dresses.each do |dress| %>
       <div class="dress-index-card">
 
-      <% if dress.photo.attached? %>
-      <div class="dress-index-image text-center">
-        <%= link_to dress_path(dress) do %>
-          <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
+        <% if dress.photo.attached? %>
+        <div class="dress-index-image text-center grid-photo">
+          <%= link_to dress_path(dress) do %>
+            <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
+          <% end %>
+        </div>
+        <% else %>
         <% end %>
-      </div>
-      <% else %>
-      <% end %>
-      <div class="dress-index-info text-center">
-      <%= link_to dress.name, dress_path(dress) %>
-      </br>
-      <p>£ <%= dress.price %></p>
-      </div>
 
+        <div class="dress-index-info text-center">
+        <%= link_to dress.name, dress_path(dress) %>
+        </br>
+        <p>£ <%= dress.price %></p>
+        </div>
       </div>
-    <% end %>
+      <% end %>
+    </div>
 
     <div id="map"
-    style="height: 500px !important; width: 300px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-     </div>
+      style="height: 500px !important; width: 300px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
 </div>
 
 <!-- end of file -->

@@ -40,7 +40,7 @@ User.create! email: "cat@gmail.com", password:"654321"
 
 puts 'Creating new dresses...'
 first_dress = Dress.create(
-  price: 12,
+  price: 70,
   name: "CHANEL Light Purple",
   category: "Prom dress",
   size: "UK 6",
@@ -50,7 +50,7 @@ first_dress.photo.attach(io: file, filename: "anna-logacheva-jmc3Mi5exRk-unsplas
 
 
 second_dress = Dress.create(
-  price: 30,
+  price: 15,
   name: "TOPSHOP Summer Dress",
   category: "Casual dress",
   size: "UK 6",
@@ -84,6 +84,7 @@ fifth_dress = Dress.create(
   category: "Prom dress",
   size: "UK 8",
   address: "61 Richmond Avenue, London"
+  
   )
 fifth_dress.photo.attach(io: fifth_file, filename: "v1582676244/Screenshot_2020-02-25_at_23.53.43_lg3chd.png" , content_type: 'image/png')
 
