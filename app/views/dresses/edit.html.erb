@@ -1,7 +1,7 @@
 <h3>Edit the dress </h3>
 <%= simple_form_for(@dress) do |f| %>
 <%= f.input :name %>
-<%= f.input :size, collection: ["UK 0","UK 2","UK 4","UK 6","UK 8","UK 10","UK 12","UK 14","UK 16"] %>
+<%= f.input :size, collection: ["UK 4","UK 6","UK 8","UK 10","UK 12","UK 14","UK 16"] %>
 <%= f.input :price %>
 <%= f.input :address %>
 <%= f.input :photo, as: :file %>
