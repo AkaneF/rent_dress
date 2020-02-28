@@ -20,6 +20,7 @@
   max-width: max-content; //card max size wide km
   align-self: center; //card content center km
   background-color: white;
+
   height:390px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -35,7 +36,6 @@
 
 .booking-photo img{
   height:330px;
-  width:auto;
   border-radius:5px;
   margin: 5px;
 }
