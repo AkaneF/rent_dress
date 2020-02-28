@@ -1,18 +1,17 @@
-
 <div class="container grid pb-5">
     <!-- image and description -->
     <div class="dress-all">
 
       <div class="dress-image-show">
         <%= cl_image_tag @dress.photo.key,height: 500, width: 350, crop: :fill, data: {toggle: "modal", target: "#exampleModal"} %>
+        </div>
+        <div class="dress-info mt-3">
+          <h5 class="pb-4"><%= @dress.name %></h5>
+            <p><b>Price:</b> £<%= @dress.price %></p>
+            <p><b>Category:</b> <%= @dress.category %></p>
+            <p><b>Size:</b> <%= @dress.size%></p>
+        </div>
       </div>
-      <div class="dress-info mt-3">
-        <h5 class="pb-4"><%= @dress.name %></h5>
-          <p><b>Price:</b> £<%= @dress.price %></p>
-          <p><b>Category:</b> <%= @dress.category %></p>
-          <p><b>Size:</b> <%= @dress.size%></p>
-      </div>
-    </div>
     <!-- booking form and button -->
     <div class="booking-all">
       <h2 class="pb-4">Book this dress</h2>
@@ -41,12 +40,18 @@
             <%= f.input :content %>
             <%= f.submit class: "btn btn-light mt-3 create-booking-button" %>
           <% end %>
-
       <% end %>
     </div>
 
+      <div><h2>You may also like...</h2></div>
+        <div>
+          <% @dresses.where(category: @dress.category).each do |dress| %>
+            <% next if dress == @dress %>
+              <%= cl_image_tag dress.photo.key, class: "small-image"%>
+          <% end %>
+        </div>
+      </div>
 </div>
-
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

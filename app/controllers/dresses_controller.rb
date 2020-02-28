@@ -12,7 +12,7 @@ class DressesController < ApplicationController
   end
 
   def show
-
+      @dresses = Dress.all
   end
 
   def new
