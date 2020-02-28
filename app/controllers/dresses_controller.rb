@@ -12,7 +12,7 @@ class DressesController < ApplicationController
   end
 
   def show
-      @dresses = Dress.all
+    @dresses = Dress.all.where(category: @dress.category).where.not(id: @dress.id)
   end
 
   def new
