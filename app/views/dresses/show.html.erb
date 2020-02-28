@@ -1,5 +1,6 @@
-<div class="container grid pb-5">
+<div class="container pb-5">
     <!-- image and description -->
+    <div class="grid">
     <div class="dress-all">
 
       <div class="dress-image-show">
@@ -44,12 +45,10 @@
     </div>
 
       <div><h2>You may also like...</h2></div>
-        <div>
-          <% @dresses.where(category: @dress.category).each do |dress| %>
-            <% next if dress == @dress %>
-              <%= cl_image_tag dress.photo.key, class: "small-image"%>
-          <% end %>
-        </div>
+      <br>
+      </div>
+      <%= render "dress_carousel", dresses: @dresses, original_dress: @dress %>
+
       </div>
 </div>
 

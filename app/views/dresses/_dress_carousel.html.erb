@@ -1,0 +1,48 @@
+<div class="container my-4">
+
+  <!--Carousel Wrapper-->
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+    <!--Controls-->
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <% dresses.in_groups_of(3).each_with_index do |dress_array, i| %>
+        <div class="carousel-item <%= 'active' if i.zero? %>">
+          <div class="row">
+            <% dress_array.each do |dress| %>
+              <% next unless dress %>
+              <%= link_to dress_path(dress) do%>
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <%= cl_image_tag dress.photo.key, class: "small-image" %>
+                  <div class="card-body">
+                    <h4 class="card-title"><%= dress.name  %></h4>
+                    <p class="card-text">£<%= dress.price %></p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <!--/.Slides-->
+  </div>
+  <!--/.Carousel Wrapper-->
+</div>
