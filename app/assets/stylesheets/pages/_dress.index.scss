@@ -6,7 +6,6 @@
   color: #1a1919;
   letter-spacing: 1px;
   font-weight: 400;
-
 }
 
 .index-heading {
@@ -81,6 +80,8 @@
 
 #map {
   position: sticky;
-
+  margin-right: 35px;
+  top:0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
 }

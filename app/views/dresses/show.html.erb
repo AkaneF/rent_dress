@@ -23,8 +23,8 @@
       <% end %>
 
 
-      <div class="show-ratings pt-4">
-        <h3>User Review</h3>
+      <div class="show-ratings pt-5">
+        <h3>User Reviews</h3>
           <% @dress.reviews.each do |review|%>
           <p></p>
             <div class="border ratings-table">
@@ -39,7 +39,7 @@
           <%= simple_form_for [@dress, Review.new] do |f| %>
             <%= f.input :rating, collection: 1..5  %>
             <%= f.input :content %>
-            <%= f.submit class: "btn btn-light mt-3 create-booking-button" %>
+            <%= f.submit class: "btn btn-light mt-3 mb-5 create-booking-button" %>
           <% end %>
       <% end %>
     </div>
