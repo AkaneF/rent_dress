@@ -29,12 +29,14 @@ fourteenth_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1
 fifteenth_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582808487/grey_mmuzpo.jpg')
 sixteenth_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582809757/green_y6fv2q.jpg')
 seventeen_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582810579/dot_al9j64.jpg')
-
+eighteenth_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582841238/print_dress_pgdcjj.jpg')
 puts 'Deleting old data...'
 Booking.destroy_all
 Dress.destroy_all
-User.create email: "test@test.com", password: "123456"
-User.create email: "cat@test.com", password:"123"
+Review.destroy_all
+User.destroy_all
+user_1 = User.create! email: "yuma89@gmail.com", password: "123456"
+User.create! email: "cat@gmail.com", password:"654321"
 
 puts 'Creating new dresses...'
 first_dress = Dress.create(
@@ -108,7 +110,7 @@ eighth_dress = Dress.create(
   name: "Grey Dress with back details",
   category: "Casual dress",
   size: "UK 4",
-  address: "Olympic Park, Montfichet Rd, London"
+  address: "95 Tottenham Court Rd, Bloomsbury, London"
   )
 eighth_dress.photo.attach(io: eighth_file, filename: "grey_dress_ctgcvw.jpg" , content_type: 'image/jpg')
 
@@ -149,7 +151,7 @@ twelfth_dress = Dress.create(
 twelfth_dress.photo.attach(io: twelfth_file, filename: "gold_dress_mel434.jpg" , content_type: 'image/jpg')
 
 thirteen_dress = Dress.create(
-  price: 10,
+  price: 20,
   name: "Red Lace Maxi Dress",
   category: "Prom dress",
   size: "UK 8",
@@ -158,7 +160,7 @@ thirteen_dress = Dress.create(
 thirteen_dress.photo.attach(io: thirteen_file, filename: "red_lace_dress_cybo54.jpg" , content_type: 'image/jpg')
 
 fourteenth_dress = Dress.create(
-  price: 40,
+  price: 30,
   name: "Shocking Pink Dress",
   category: "Wedding guest dress",
   size: "UK 16",
@@ -167,7 +169,7 @@ fourteenth_dress = Dress.create(
 fourteenth_dress.photo.attach(io: fourteenth_file, filename: "shocking_pink_kt9vsn.jpg" , content_type: 'image/jpg')
 
 fifteenth_dress = Dress.create(
-  price: 40,
+  price: 20,
   name: "Grey Button Detailed Mini dress",
   category: "Casual dress",
   size: "UK 4",
@@ -176,7 +178,7 @@ fifteenth_dress = Dress.create(
 fifteenth_dress.photo.attach(io: fifteenth_file, filename: "grey_mmuzpo.jpg" , content_type: 'image/jpg')
 
 sixteenth_dress = Dress.create(
-  price: 40,
+  price: 80,
   name: "Green Embellished Dress",
   category: "Party dress",
   size: "UK 6",
@@ -185,7 +187,7 @@ sixteenth_dress = Dress.create(
 sixteenth_dress.photo.attach(io: sixteenth_file, filename: "green_y6fv2q.jpg" , content_type: 'image/jpg')
 
 seventeen_dress = Dress.create(
-  price: 40,
+  price: 75,
   name: "Polka-Dot Off-the-Shoulder Dress",
   category: "Party dress",
   size: "UK 4",
@@ -193,12 +195,33 @@ seventeen_dress = Dress.create(
   )
 seventeen_dress.photo.attach(io: seventeen_file, filename: "dot_al9j64.jpg" , content_type: 'image/jpg')
 
+eighteenth_dress = Dress.create(
+  price: 50,
+  name: "Tyra Botanical-print Maxi dress",
+  category: "Wedding guest dress",
+  size: "UK 8",
+  address: "300 Oxford St, Marylebone, London"
+  )
+eighteenth_dress.photo.attach(io: eighteenth_file, filename: "print_dress_pgdcjj.jpg" , content_type: 'image/jpg')
+
+Dress.all.each do |dress|
+  2.times do
+  Review.create(
+    content: ["Very good quality.Got a lot of compliment with it!","Such a cute dress.Very soft and comfy.","Would never buy it but it's so nice to own it for one day!"].sample,
+    rating: [3,4,5].sample,
+    dress: dress,
+    user: user_1
+    )
+  end
+end
 
 
-
-Review.create(
-  content: "Very good quality",
-  rating: "4"
+Booking.create(
+  start_date: Date.new(2020,2,28),
+  end_date: Date.new(2020,2,29),
+  dress:Dress.all.sample,
+  user: user_1,
+  # user: User.all.sample
   )
 
 puts 'Seeding done'
