@@ -3,7 +3,7 @@ class DressesController < ApplicationController
 
   def index
     @dresses = Dress.all
-    @dresses = Dress.geocoded
+     @dresses = Dress.geocoded
     @markers = @dresses.map do |dress|
       {
         lat: dress.latitude,
