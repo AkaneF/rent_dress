@@ -4,8 +4,9 @@ body {
   background-color: #fcf4f4;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Dancing Script';
+  text-align: center;
 }
 
 .dress-img {
@@ -20,7 +21,4 @@ h1, h2 {
 .description {
   text-align: center;
   margin: 50px;
-  h2 {
-    font-family: 'Dancing Script';
-  }
 }
