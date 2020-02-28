@@ -8,10 +8,6 @@ require "open-uri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
-
-
 file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582658641/anna-logacheva-jmc3Mi5exRk-unsplash_xm0vlo.jpg')
 second_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582676024/Screenshot_2020-02-25_at_23.48.00_ewuyng.png')
 third_file = URI.open('https://res.cloudinary.com/dhhorrhuq/image/upload/v1582650374/hyrjhefespsagw9z814gz0k8el06.jpg')
