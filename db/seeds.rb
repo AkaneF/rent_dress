@@ -36,6 +36,7 @@ Dress.destroy_all
 Review.destroy_all
 User.destroy_all
 user_1 = User.create! email: "yuma89@gmail.com", password: "123456"
+user_2 = User.create! email: "cara@gmail.com", password: "123456"
 User.create! email: "cat@gmail.com", password:"654321"
 
 puts 'Creating new dresses...'
@@ -84,7 +85,7 @@ fifth_dress = Dress.create(
   category: "Prom dress",
   size: "UK 8",
   address: "61 Richmond Avenue, London"
-  
+
   )
 fifth_dress.photo.attach(io: fifth_file, filename: "v1582676244/Screenshot_2020-02-25_at_23.53.43_lg3chd.png" , content_type: 'image/png')
 
