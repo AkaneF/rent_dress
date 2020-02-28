@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-lewagon" <%= 'style=position:absolute;background:rgba(26,23,23,0.4)' if params[:action] == 'home' %>>
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>

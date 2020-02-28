@@ -76,122 +76,122 @@ fourth_dress = Dress.create(
   )
 fourth_dress.photo.attach(io: fourth_file, filename: "v1582676121/Screenshot_2020-02-25_at_23.54.11_zl8aps.png" , content_type: 'image/png')
 
-# fifth_dress = Dress.create(
-#   price: 120,
-#   name: "GUCCI Purple Dress ",
-#   category: "Prom dress",
-#   size: "UK 8",
-#   address: "Westgate House, 2a, Prebend St, London"
-#   )
-# fifth_dress.photo.attach(io: fifth_file, filename: "v1582676244/Screenshot_2020-02-25_at_23.53.43_lg3chd.png" , content_type: 'image/png')
+fifth_dress = Dress.create(
+  price: 120,
+  name: "GUCCI Purple Dress ",
+  category: "Prom dress",
+  size: "UK 8",
+  address: "Westgate House, 2a, Prebend St, London"
+  )
+fifth_dress.photo.attach(io: fifth_file, filename: "v1582676244/Screenshot_2020-02-25_at_23.53.43_lg3chd.png" , content_type: 'image/png')
 
-# sixth_dress = Dress.create(
-#   price: 85,
-#   name: "Prada Yellow Dress",
-#   category: "Prom dress",
-#   size: "UK 12",
-#   address: "98b St. Paul St, London"
-#   )
-# sixth_dress.photo.attach(io: sixth_file, filename: "honey-yanibel-minaya-cruz-sDYat0TWq0w-unsplash_vgdky6.jpg" , content_type: 'image/jpg')
+sixth_dress = Dress.create(
+  price: 85,
+  name: "Prada Yellow Dress",
+  category: "Prom dress",
+  size: "UK 12",
+  address: "98b St. Paul St, London"
+  )
+sixth_dress.photo.attach(io: sixth_file, filename: "honey-yanibel-minaya-cruz-sDYat0TWq0w-unsplash_vgdky6.jpg" , content_type: 'image/jpg')
 
-# seventh_dress = Dress.create(
-#   price: 75,
-#   name: "Black Mini Lace Dress",
-#   category: "Casual dress",
-#   size: "UK 6",
-#   address: "14 Dagmar Passage"
-#   )
-# seventh_dress.photo.attach(io: seventh_file, filename: "black_dres_qqapba.jpg" , content_type: 'image/jpg')
+seventh_dress = Dress.create(
+  price: 75,
+  name: "Black Mini Lace Dress",
+  category: "Casual dress",
+  size: "UK 6",
+  address: "14 Dagmar Passage"
+  )
+seventh_dress.photo.attach(io: seventh_file, filename: "black_dres_qqapba.jpg" , content_type: 'image/jpg')
 
-# eighth_dress = Dress.create(
-#   price: 25,
-#   name: "Grey Dress with back details",
-#   category: "Casual dress",
-#   size: "UK 4",
-#   address: "54 Duncan Street, Shoreditch, LONDON"
-#   )
-# eighth_dress.photo.attach(io: eighth_file, filename: "grey_dress_ctgcvw.jpg" , content_type: 'image/jpg')
+eighth_dress = Dress.create(
+  price: 25,
+  name: "Grey Dress with back details",
+  category: "Casual dress",
+  size: "UK 4",
+  address: "54 Duncan Street, Shoreditch, LONDON"
+  )
+eighth_dress.photo.attach(io: eighth_file, filename: "grey_dress_ctgcvw.jpg" , content_type: 'image/jpg')
 
-# ninth_dress = Dress.create(
-#   price: 35,
-#   name: "Black Maxi Silk Dress",
-#   category: "Casual dress",
-#   size: "UK 2",
-#   address: "100 Upper St, London"
-#   )
-# ninth_dress.photo.attach(io: ninth_file, filename: "black_dress_dxe7yy.jpg" , content_type: 'image/jpg')
+ninth_dress = Dress.create(
+  price: 35,
+  name: "Black Maxi Silk Dress",
+  category: "Casual dress",
+  size: "UK 2",
+  address: "100 Upper St, London"
+  )
+ninth_dress.photo.attach(io: ninth_file, filename: "black_dress_dxe7yy.jpg" , content_type: 'image/jpg')
 
-# tenth_dress = Dress.create(
-#   price: 40,
-#   name: "Pink Chiffon Dress",
-#   category: "Wedding guest dress",
-#   size: "UK 8",
-#   address: "St. Marys Church, Upper St, London"
-#   )
-# tenth_dress.photo.attach(io: tenth_file, filename: "pink_dress_x33ix8.jpg" , content_type: 'image/jpg')
+tenth_dress = Dress.create(
+  price: 40,
+  name: "Pink Chiffon Dress",
+  category: "Wedding guest dress",
+  size: "UK 8",
+  address: "St. Marys Church, Upper St, London"
+  )
+tenth_dress.photo.attach(io: tenth_file, filename: "pink_dress_x33ix8.jpg" , content_type: 'image/jpg')
 
-# eleventh_dress = Dress.create(
-#   price: 40,
-#   name: "Red Maxi Dress with Ruffle Details",
-#   category: "Wedding guest dress",
-#   size: "UK 4",
-#   address: "7 Upper St, London"
-#   )
-# eleventh_dress.photo.attach(io: eleventh_file, filename: "red_dress_tfnbag.jpg" , content_type: 'image/jpg')
+eleventh_dress = Dress.create(
+  price: 40,
+  name: "Red Maxi Dress with Ruffle Details",
+  category: "Wedding guest dress",
+  size: "UK 4",
+  address: "7 Upper St, London"
+  )
+eleventh_dress.photo.attach(io: eleventh_file, filename: "red_dress_tfnbag.jpg" , content_type: 'image/jpg')
 
-# twelfth_dress = Dress.create(
-#   price: 60,
-#   name: "Gold Embroidered Party Dress",
-#   category: "Party dress",
-#   size: "UK 2",
-#   address: "207 Upper St, London"
-#   )
-# twelfth_dress.photo.attach(io: twelfth_file, filename: "gold_dress_mel434.jpg" , content_type: 'image/jpg')
+twelfth_dress = Dress.create(
+  price: 60,
+  name: "Gold Embroidered Party Dress",
+  category: "Party dress",
+  size: "UK 2",
+  address: "207 Upper St, London"
+  )
+twelfth_dress.photo.attach(io: twelfth_file, filename: "gold_dress_mel434.jpg" , content_type: 'image/jpg')
 
-# thirteen_dress = Dress.create(
-#   price: 10,
-#   name: "Red Lace Maxi Dress",
-#   category: "Prom dress",
-#   size: "UK 8",
-#   address: "207 Upper Street, Islington, LONDON"
-#   )
-# thirteen_dress.photo.attach(io: thirteen_file, filename: "red_lace_dress_cybo54.jpg" , content_type: 'image/jpg')
+thirteen_dress = Dress.create(
+  price: 10,
+  name: "Red Lace Maxi Dress",
+  category: "Prom dress",
+  size: "UK 8",
+  address: "207 Upper Street, Islington, LONDON"
+  )
+thirteen_dress.photo.attach(io: thirteen_file, filename: "red_lace_dress_cybo54.jpg" , content_type: 'image/jpg')
 
-# fourteenth_dress = Dress.create(
-#   price: 40,
-#   name: "Pink Chiffon Dress",
-#   category: "Wedding guest dress",
-#   size: "UK 16",
-#   address: "1 Islington Green, London"
-#   )
-# fourteenth_dress.photo.attach(io: fourteenth_file, filename: "shocking_pink_kt9vsn.jpg" , content_type: 'image/jpg')
+fourteenth_dress = Dress.create(
+  price: 40,
+  name: "Pink Chiffon Dress",
+  category: "Wedding guest dress",
+  size: "UK 16",
+  address: "1 Islington Green, London"
+  )
+fourteenth_dress.photo.attach(io: fourteenth_file, filename: "shocking_pink_kt9vsn.jpg" , content_type: 'image/jpg')
 
-# fifteenth_dress = Dress.create(
-#   price: 40,
-#   name: "Grey Button Detailed Mini dress",
-#   category: "Casual dress",
-#   size: "UK 4",
-#   address: "61 Richmond Avenue, London"
-#   )
-# fifteenth_dress.photo.attach(io: fifteenth_file, filename: "grey_mmuzpo.jpg" , content_type: 'image/jpg')
+fifteenth_dress = Dress.create(
+  price: 40,
+  name: "Grey Button Detailed Mini dress",
+  category: "Casual dress",
+  size: "UK 4",
+  address: "61 Richmond Avenue, London"
+  )
+fifteenth_dress.photo.attach(io: fifteenth_file, filename: "grey_mmuzpo.jpg" , content_type: 'image/jpg')
 
-# sixteenth_dress = Dress.create(
-#   price: 40,
-#   name: "Green Embellished Dress",
-#   category: "Party dress",
-#   size: "UK 6",
-#   address: "The Shopping Centre, 21, Parkfield St, London"
-#   )
-# sixteenth_dress.photo.attach(io: sixteenth_file, filename: "green_y6fv2q.jpg" , content_type: 'image/jpg')
+sixteenth_dress = Dress.create(
+  price: 40,
+  name: "Green Embellished Dress",
+  category: "Party dress",
+  size: "UK 6",
+  address: "The Shopping Centre, 21, Parkfield St, London"
+  )
+sixteenth_dress.photo.attach(io: sixteenth_file, filename: "green_y6fv2q.jpg" , content_type: 'image/jpg')
 
-# seventeen_dress = Dress.create(
-#   price: 40,
-#   name: "Polka-Dot Off-the-Shoulder Dress",
-#   category: "Party dress",
-#   size: "UK 4",
-#   address: "Camden Passage, 33, Islington Green, London"
-#   )
-# seventeen_dress.photo.attach(io: seventeen_file, filename: "dot_al9j64.jpg" , content_type: 'image/jpg')
+seventeen_dress = Dress.create(
+  price: 40,
+  name: "Polka-Dot Off-the-Shoulder Dress",
+  category: "Party dress",
+  size: "UK 4",
+  address: "Camden Passage, 33, Islington Green, London"
+  )
+seventeen_dress.photo.attach(io: seventeen_file, filename: "dot_al9j64.jpg" , content_type: 'image/jpg')
 
 
 
