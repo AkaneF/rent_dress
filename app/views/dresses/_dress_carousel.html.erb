@@ -26,7 +26,7 @@
           <div class="row">
             <% dress_array.each do |dress| %>
               <% next unless dress %>
-              <%= link_to dress_path(dress) do%>
+              <%= link_to dress_path(dress),class:"card-link" do%>
               <div class="col-md-4">
                 <div class="card mb-2">
                   <%= cl_image_tag dress.photo.key, class: "small-image" %>

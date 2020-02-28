@@ -38,10 +38,19 @@ body {
 }
 
 .small-image{
-  height: 200px;
-  width: auto;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 74% ;
 }
-.small-card{
-  font-family: HelveticaNeueW01-65Medi,sans-serif;
-
+.card-body h4{
+  font-size: 16px;
+  color:black;
+}
+.card-text{
+  font-size: 15px;
+  color:black;
+}
+.controls-top a{
+  color:black;
 }
