@@ -5,14 +5,14 @@
       <div class="dress-index-card">
 
       <% if dress.photo.attached? %>
-      <div class="dress-index-image">
+      <div class="dress-index-image text-center">
         <%= link_to dress_path(dress), target: :_blank do %>
           <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
         <% end %>
       </div>
       <% else %>
       <% end %>
-      <div class="dress-index-info">
+      <div class="dress-index-info text-center">
       <%= link_to dress.name, dress_path(dress) %>
       </br>
       <p>£ <%= dress.price %></p>
