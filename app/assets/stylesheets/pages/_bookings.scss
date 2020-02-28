@@ -1,0 +1,60 @@
+.head{
+  text-align: center;
+  padding: 40px;
+  font-size: 80px;
+}
+.bookings-container{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+margin:20px;
+}
+.booking-head{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.booking-card{
+  padding: 20px;
+  margin-bottom: 50px;
+  max-width: max-content; //card max size wide km
+  align-self: center; //card content center km
+  background-color: white;
+  height:390px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display:flex;
+  border-radius: 10px;
+}
+
+.bin{
+  font-size: 20px;
+  color:black;
+
+}
+
+.booking-photo img{
+  height:330px;
+  width:auto;
+  border-radius:5px;
+  margin: 5px;
+}
+.booking-details{
+  font-family: 'Dancing Script';
+  font-size: 17px;
+  margin-left: 40px;
+}
+
+.dress-index{
+  border: solid 1px black;
+  border-radius:10px;
+  background-color: white;
+  margin:40px;
+  padding:10px 20px;
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+
+}

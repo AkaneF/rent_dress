@@ -1,11 +1,31 @@
-<h1>Index page for dresses</h1>
-<% @dresses.each do |dress| %>
-  <%= dress.name %>
-  <% if dress.photo.attached? %>
-    <%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %>
-  <% else %>
-    <%= cl_image_tag "th2pn0ppea3dn3iq5h7w", height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <%= link_to dress.name, dress_path(dress) %>
-<% end %>
-<%= link_to "Add dress", new_dress_path, class: "btn btn-primary" %>
+ <h2>All Dresses</h2>
+
+  <div class="grid-index">
+    <% @dresses.each do |dress| %>
+      <div class="dress-index-card">
+
+      <% if dress.photo.attached? %>
+      <div class="dress-index-image text-center">
+        <%= link_to dress_path(dress), target: :_blank do %>
+          <%= cl_image_tag dress.photo.key, height: 350, width: 250, crop: :fill %>
+        <% end %>
+      </div>
+      <% else %>
+      <% end %>
+      <div class="dress-index-info text-center">
+      <%= link_to dress.name, dress_path(dress) %>
+      </br>
+      <p>£ <%= dress.price %></p>
+      </div>
+
+      </div>
+    <% end %>
+  </div>
+
+    <div id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+<!-- end of file -->

@@ -1,19 +1,64 @@
-<div>
-<p><%= link_to"dress index page", dresses_path %></p>
-<h2>Dress show page</h2>
-<%= @dress.name %>
-<%= @dress.price %>
-<%= @dress.category %>
-<%= @dress.size%>
-<%= link_to "edit dress", edit_dress_path %>
+<!-- navbar -->
+<div class="topnav-all-pages">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
 </div>
+  <div class="container grid pb-5">
+    <!-- image and description -->
+    <div class="dress-all">
 
-<% @dress.reviews.each do |review|%>
-<p><%= review.rating %></p>
-<p><%= review.content %></p>
-<% end %>
+      <div class="dress-image-show">
+        <%= cl_image_tag @dress.photo.key,height: 500, width: 350, crop: :fill, data: {toggle: "modal", target: "#exampleModal"} %>
+      </div>
+      <div class="dress-info mt-3">
+        <h5 class="pb-4"><%= @dress.name %></h5>
+          <p><b>Price:</b> £<%= @dress.price/100 %></p>
+          <p><b>Category:</b> <%= @dress.category %></p>
+          <p><b>Size:</b> <%= @dress.size%></p>
+      </div>
+    </div>
+    <!-- booking form and button -->
+    <div class="booking-all">
+      <h2>Book this dress</h2>
+        <%= simple_form_for [@dress, Booking.new] do |f| %>
+          <%= f.input :start_date, as: :date, html5:true, input_html: { value: Date.today } %>
+          <%= f.input :end_date,as: :date, html5:true, input_html: { value: Date.today + 1 } %>
+          <%= f.submit class: "btn btn-light mt-3 create-booking-button" %>
+      <% end %>
+      <div class="d-flex justify-content-center">
+          <% @dress.reviews.each do |review|%>
+          <p><%= "⭐" * (review.rating) %></p>
+          <p><%= review.content %></p>
+          <% end %>
+        </div>
 
-<p><%= link_to "Book", new_dress_booking_path(@dress) %></p>
-<p><%= link_to "Adding Review", new_dress_review_path(@dress) %></p>
-<p><%= link_to "Back", dresses_path %></p>
-<%= link_to "delete", dress_path(@dress), method: :delete, data: { confirm: "Are you sure?"}%>
+      <% if Booking.where(dress: @dress).where(user: current_user).any? %>
+        <h2>Add Review</h2>
+          <%= simple_form_for [@dress, Review.new] do |f| %>
+            <%= f.input :rating, collection: 1..5  %>
+            <%= f.input :content %>
+            <%= f.submit class: "btn btn-primary" %>
+          <% end %>
+
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= @dress.name %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= cl_image_tag @dress.photo.key, class: "modal-img-w" %>
+      </div>
+    </div>
+  </div>
+</div>

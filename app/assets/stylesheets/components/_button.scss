@@ -1,0 +1,19 @@
+.home-button {
+  padding: 10px 30px;
+  color: #f2f2f2;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  a:hover {
+    text-decoration: none;
+    color: grey;
+  }
+}
+
+.create-booking-button {
+    margin-left: 60px;
+    padding: 10px 20px;
+    border: solid 1px lightgray;
+}

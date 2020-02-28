@@ -1,6 +1,40 @@
+// .topnav {
+//   background-color: black;
+//   height: 60px;
+//   opacity: 0.5;
+//   position: fixed;
+//   text-decoration: none;
+//   width: 100%;
+//   padding: 0 50;
+// }
+
+.navbar-lewagon a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-lewagon a:hover {
+  background: #ddd;
+  color: grey;
+}
+
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #1a1717;
+  opacity: 0.5;
+  position: fixed;
+  text-decoration: none;
+  width: 100%;
+  padding: 0 50;
 }
 
 .navbar-lewagon .navbar-collapse {

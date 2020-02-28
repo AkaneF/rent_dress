@@ -22,3 +22,16 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 import "bootstrap";
+import { initMapbox } from './init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
+
+// $(document).ready(function() {
+//   $('.full-screen img').click( function(e) {
+//     console.log("hi")
+//       $('.full-screen img').css('width','500px');
+//       $('.full-screen img').css('height','900px');
+//   });
+// });
