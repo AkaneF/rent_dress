@@ -18,5 +18,5 @@ Using:
 * Geocoding
 * Image upload via cloudinary
 
-LinkedIn: [Ingrid Cheng](https://www.linkedin.com/in/ingrid-cheng/)
+LinkedIn: [Ingrid Cheng](https://www.linkedin.com/in/ingrid-cheng/)<br>
 Website: [RentDress] (https://rentdress.herokuapp.com/)
