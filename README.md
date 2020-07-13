@@ -17,6 +17,6 @@ Using:
 * Authentication
 * Geocoding
 * Client side photo upload via cloudinary
-
+---
 LinkedIn: [Ingrid Cheng](https://www.linkedin.com/in/ingrid-cheng/)<br>
 Website: [RentDress](https://rentdress.herokuapp.com/)
